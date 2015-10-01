@@ -26,7 +26,7 @@ la $t0, msg            #load a string to be reversed
 loop:
 lb $t0, 0 ($t0)       #load char from msg
 beqz $t0, stringEnd   # if null end loop
-addi $sp, $sp -1      # reduce stack pointer
+addi $sp, $sp, -1      # reduce stack pointer
 sb $t0, 0 ($sp)       # store t0 into stack
 addi $t1, $t1, 1      # gets next char
 j loop
