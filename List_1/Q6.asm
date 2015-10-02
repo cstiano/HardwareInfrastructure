@@ -1,3 +1,5 @@
+# Devido a várias dúvidas sobre essa questão, a nossa melhor versão converte um numero inteiro para a sua representação em string.
+
 .data
 n: .word -52
 str: .asciiz "a"
