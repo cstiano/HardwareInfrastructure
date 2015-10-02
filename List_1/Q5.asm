@@ -1,6 +1,7 @@
 .data
 n: .word 0
 s: .word 0
+out: .word 0
 put_n: .asciiz "Put n: "
 put_s: .asciiz "Put s: "
 result: .asciiz "Result of n!/(s!(n-s)!): "
@@ -74,7 +75,7 @@ fat_n_s:
 C_calculo:
 	mul $t4,$t4,$t5 # calcula s!(n-s)!
 	div $t3,$t4	#calcula n! / (s!(n-s)!)
-	mflo $s0	#move resultado da divisão pra s0
+	mflo $s0	#move resultado da divisï¿½o pra s0
 	
 	
 
@@ -84,9 +85,12 @@ printf:
 	la $a0, result
 	syscall
 	
-	la $a0, ($s0)
+	la $a0, ($s0) #saida do n! / (s!(n-s)!)
 	li $v0,1
 	syscall
+	
+	sw $s0, out #salva resultado na memÃ³ria
+	 
 	j end
 	
 	

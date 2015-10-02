@@ -1,6 +1,6 @@
 .data
 a: .word 3
-b: .word 6
+b: .word -5
 m: .word 10
 
 .text
