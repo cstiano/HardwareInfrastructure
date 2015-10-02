@@ -39,4 +39,6 @@ addi $12,$0,0               # Zera o <Reg 12> (FLAG)
 .SaindoDoLoop:
 bgtz $12,.addNeg            # Se a FLAG for maior que zero => precisa colocar o sinal de negativo
 
+break
+nop
 .end start
