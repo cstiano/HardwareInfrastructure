@@ -24,6 +24,7 @@ write_stack:
 	bltz $t2, inc_32		
 	bgez $t2, dec_32
 	back:
+	
 	sb $t1, 0($sp)			#colocar o cha[i] na pilha	
 	add $t0,$t0,1			# i++ 
 	j write_stack
